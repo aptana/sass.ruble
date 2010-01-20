@@ -1,7 +1,7 @@
 require 'java'
 require 'radrails'
 
-bundle 'Ruby Sass' do |bundle|
+bundle 'Sass' do |bundle|
   bundle.author = 'Bob Aman'
   bundle.contact_email_rot_13 = 'obo@fcbexzbatre.pbz'
   bundle.description =  <<END
@@ -9,8 +9,8 @@ Template language for easily creating CSS; implemented in ruby.
 END
   bundle.repository = 'http://github.com/aptana/sass-rbundle.git'
   
-  bundle.menu 'Ruby Sass' do |main_menu|
-    main_menu.scope = 'source.sass', 'source.css'
+  bundle.menu 'Sass' do |main_menu|
+    main_menu.scope = ['source.sass', 'source.css']
     
     main_menu.menu 'Background' do |submenu|
       submenu.command 'background: color image repeat attachment position copy'
@@ -147,5 +147,21 @@ END
     main_menu.command 'Convert CSS to SASS'
     main_menu.command 'Insert Color...'
     main_menu.command 'Update Bundle'
+  end
+end
+
+# Extend RadRails::Editor to add special ENV vars
+module RadRails
+  class Editor
+    alias :pre_sass_env :to_env
+    def to_env
+      env_hash = pre_sass_env
+      scopes = current_scope.split(' ')
+      if scopes.include? "source.sass"
+        env_hash['TM_COMMENT_START'] = "// "
+        env_hash['TM_COMMENT_START_2'] = "/*"
+      end
+      env_hash
+    end
   end
 end

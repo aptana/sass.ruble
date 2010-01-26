@@ -7,7 +7,7 @@ bundle 'Sass' do |bundle|
   bundle.description =  <<END
 Template language for easily creating CSS; implemented in ruby.
 END
-  bundle.repository = 'http://github.com/aptana/sass-rbundle.git'
+  bundle.repository = 'http://github.com/aptana/sass-ruble.git'
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']

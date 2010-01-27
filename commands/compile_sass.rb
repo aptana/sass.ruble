@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 require "sass_engine"
 
 command 'Compile SASS' do |cmd|

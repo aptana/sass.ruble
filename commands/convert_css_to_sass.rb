@@ -1,4 +1,4 @@
-require 'radrails'
+require 'ruble'
 
 command 'Convert CSS to SASS' do |cmd|
   cmd.key_binding = 'OPTION+COMMAND+c'

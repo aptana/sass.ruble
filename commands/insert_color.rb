@@ -1,5 +1,5 @@
-require 'radrails'
-require 'radrails/ui'
+require 'ruble'
+require 'ruble/ui'
 require 'colors'
  
 command "Insert Color..." do |cmd|
@@ -15,7 +15,7 @@ command "Insert Color..." do |cmd|
       colour = '#' + COLOURS[colour] if COLOURS.has_key? colour
     end
     
-    result = RadRails::UI.request_color(colour)
+    result = Ruble::UI.request_color(colour)
     result.nil? ? colour : result
   end
 end

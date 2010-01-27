@@ -1,5 +1,5 @@
 require 'java'
-require 'radrails'
+require 'ruble'
 
 bundle 'Sass' do |bundle|
   bundle.author = 'Bob Aman'
@@ -7,7 +7,7 @@ bundle 'Sass' do |bundle|
   bundle.description =  <<END
 Template language for easily creating CSS; implemented in ruby.
 END
-  bundle.repository = 'http://github.com/aptana/sass-rbundle.git'
+  bundle.repository = 'http://github.com/aptana/sass-ruble.git'
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']
@@ -150,8 +150,8 @@ END
   end
 end
 
-# Extend RadRails::Editor to add special ENV vars
-module RadRails
+# Extend Ruble::Editor to add special ENV vars
+module Ruble
   class Editor
     alias :pre_sass_env :to_env
     def to_env

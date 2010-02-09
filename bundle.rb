@@ -4,10 +4,12 @@ require 'ruble'
 bundle 'Sass' do |bundle|
   bundle.author = 'Bob Aman'
   bundle.contact_email_rot_13 = 'obo@fcbexzbatre.pbz'
-  bundle.description =  <<END
-Template language for easily creating CSS; implemented in ruby.
-END
+  bundle.description = 'Template language for easily creating CSS; implemented in ruby.'
   bundle.repository = 'http://github.com/aptana/sass-ruble.git'
+  
+  foldingStartMarker = /^\s*([-%#\:\.\w\=].*)\s$/
+  foldingStopMarker = /^\s*$/
+  bundle.set_folding_markers('source.sass', foldingStartMarker, foldingStopMarker)
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']

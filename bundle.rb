@@ -5,7 +5,7 @@ bundle 'Sass' do |bundle|
   bundle.author = 'Bob Aman'
   bundle.contact_email_rot_13 = 'obo@fcbexzbatre.pbz'
   bundle.description = 'Template language for easily creating CSS; implemented in ruby.'
-  bundle.repository = 'http://github.com/aptana/sass-ruble.git'
+  bundle.repository = 'http://github.com/aptana/sass.ruble.git'
   
   foldingStartMarker = /^\s*([-%#\:\.\w\=].*)\s$/
   foldingStopMarker = /^\s*$/

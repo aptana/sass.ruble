@@ -9,7 +9,7 @@ bundle 'Sass' do |bundle|
   
   foldingStartMarker = /^\s*([-%#\:\.\w\=].*)\s$/
   foldingStopMarker = /^\s*$/
-  bundle.set_folding_markers('source.sass', foldingStartMarker, foldingStopMarker)
+  bundle.folding['source.sass'] = foldingStartMarker, foldingStopMarker
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']

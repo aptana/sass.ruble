@@ -11,6 +11,7 @@ bundle 'Sass' do |bundle|
   foldingStartMarker = /^\s*([-%#\:\.\w\=].*)\s$/
   foldingStopMarker = /^\s*$/
   bundle.folding['source.sass'] = foldingStartMarker, foldingStopMarker
+  bundle.file_types['source.sass'] = '*.sass'
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']

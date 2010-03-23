@@ -151,7 +151,6 @@ bundle do |bundle|
     main_menu.command 'Compile SASS'
     main_menu.command 'Convert CSS to SASS'
     main_menu.command 'Insert Color...'
-    main_menu.command 'Update Bundle'
   end
 end
 

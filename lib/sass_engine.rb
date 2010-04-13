@@ -1,3 +1,5 @@
+require 'rbconfig'
+
 class SassEngine
   def initialize(filename)
     raise "You must supply a filename to compile." unless filename
@@ -12,12 +14,15 @@ class SassEngine
   
 private
   def compile!
-    command = options.empty? ? "cat" : "tail -n +2"
-    Kernel.system("#{command} #{escape(@filename)} | sass #{flags} -s > #{escape(output_filename)}")
+    Kernel.system("sass #{escape(@filename)} #{flags} > #{escape(output_filename)}")
   end
   
   def preview!
-    Kernel.system("open -g #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
+    if RbConfig::CONFIG['target_os'] =~ /(win|w)32$/
+      Kernel.system("cmd /C start /B \"\" #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
+    else
+      Kernel.system("open -g #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
+    end
   end
   
   def escape(s)

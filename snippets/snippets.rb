@@ -1,3 +1,5 @@
+require 'ruble'
+
 with_defaults :scope => 'source.sass' do |bundle|
   
 snippet 'Attribute Selector' do |s|

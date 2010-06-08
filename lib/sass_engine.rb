@@ -20,8 +20,10 @@ private
   def preview!
     if RbConfig::CONFIG['target_os'] =~ /(win|w)32$/
       Kernel.system("cmd /C start /B \"\" #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
-    else
+    elsif RbConfig::CONFIG['target_os'] =~ /darwin/
       Kernel.system("open -g #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
+    else
+      Kernel.system("xdg-open #{escape(preview_filename)}") if process_status.exitstatus.zero? && preview_filename
     end
   end
   

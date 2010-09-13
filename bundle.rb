@@ -154,20 +154,8 @@ bundle do |bundle|
   end
 end
 
-# Extend Ruble::Editor to add special ENV vars
-module Ruble
-  class Editor
-    unless method_defined?(:pre_sass_env)
-      alias :pre_sass_env :to_env
-      def to_env
-        env_hash = pre_sass_env
-        scopes = current_scope.split(' ')
-        if scopes.include? "source.sass"
-          env_hash['TM_COMMENT_START'] = "// "
-          env_hash['TM_COMMENT_START_2'] = "/*"
-        end
-        env_hash
-      end
-    end
-  end
+# add special ENV vars
+env "source.sass" do |e|
+  e['TM_COMMENT_START'] = "// "
+  e['TM_COMMENT_START_2'] = "/*"
 end

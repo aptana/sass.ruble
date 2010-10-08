@@ -1,5 +1,4 @@
 require 'ruble'
-require "sass_engine"
 
 command 'Compile SASS' do |cmd|
   cmd.key_binding = 'M1+M2+r'
@@ -7,6 +6,7 @@ command 'Compile SASS' do |cmd|
   cmd.output = :show_as_tooltip
   cmd.input = :document
   cmd.invoke do |context|
+    require "sass_engine"
     SassEngine.new(ENV['TM_FILEPATH']).execute!
   end
 end

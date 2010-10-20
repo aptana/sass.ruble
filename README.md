@@ -4,13 +4,13 @@ A bundle to enable related commands in Aptana Studio. Ported from http://github.
 
 ## Authors
 
-* Textmate Contributors
+* TextMate Contributors
 * Modifications by Aptana
 
 ## License
 
 Forthcoming.
 
-## Other Stuff
+## Bugs/Requests
 
 * You can [report a bug or request a feature here](http://github.com/aptana/sass.ruble/issues)

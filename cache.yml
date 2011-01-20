@@ -746,7 +746,7 @@ children:
   displayName: Sass
   path: bundle.rb
   scope: source.sass, source.css
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-3a28a879-f52b-403e-a383-3fa4c42ee21d,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-bb626d5b-eeb9-43a4-bef8-3b8f36d07f03,
   path: bundle.rb, scope: source.sass}
 - !!com.aptana.scripting.model.CommandElement
   async: false

@@ -746,7 +746,7 @@ children:
   displayName: Sass
   path: bundle.rb
   scope: source.sass, source.css
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-6b2b1f84-42b6-449b-87c9-94e2e438852d,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: snippet-eb7d3d5b-a61f-4698-9dcb-4e9d896cb7f9,
   path: bundle.rb, scope: source.sass}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -2130,7 +2130,7 @@ children:
   displayName: SASS Template, filetype: '*.sass', inputPath: null, keyBindingMap: null,
   outputPath: null, outputType: discard, path: templates/templates.rb, runType: current_thread,
   scope: null, workingDirectoryType: UNDEFINED}
-copyright: © Copyright 2010 Aptana Inc. Distributed under the MIT license.
+copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: &id002 {}
 description: Port of Bob Aman's TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby.

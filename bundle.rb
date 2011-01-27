@@ -3,7 +3,7 @@ require 'ruble'
 
 bundle do |bundle|
   bundle.author = 'Christopher Williams'
-  bundle.copyright = "© Copyright 2010 Aptana Inc. Distributed under the MIT license."
+  bundle.copyright = "Copyright 2010 Aptana Inc. Distributed under the MIT license."
   bundle.author = 'Bob Aman'
   bundle.display_name = 'Sass'
   bundle.description = 'Port of Bob Aman\'s TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby.'

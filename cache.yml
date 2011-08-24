@@ -746,7 +746,7 @@ children:
   displayName: Sass
   path: bundle.rb
   scope: source.sass, source.css
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-992f1b81-1739-45fa-9b85-8ac0fb52ae68,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-04ec965a-7bc7-41e6-8bfd-53afaf17e028,
   path: bundle.rb, scope: source.sass}
 - !!com.aptana.scripting.model.CommandElement
   async: false
@@ -2223,20 +2223,6 @@ children:
   path: snippets/snippets.rb
   runType: current_thread
   scope: source.sass
-  workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.TemplateElement
-  async: false
-  customProperties: null
-  displayName: SASS Template
-  filetype: '*.sass'
-  input: []
-  inputPath: null
-  keyBindingMap: null
-  outputPath: null
-  outputType: discard
-  path: templates/templates.rb
-  runType: current_thread
-  scope: null
   workingDirectoryType: UNDEFINED
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null

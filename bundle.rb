@@ -9,9 +9,17 @@ bundle do |bundle|
   bundle.description = 'Port of Bob Aman\'s TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby.'
   bundle.repository = 'http://github.com/aptana/sass.ruble.git'
   
-  foldingStartMarker = /^\s*([-%#\:\.\w\=].*)\s$/
-  foldingStopMarker = /^\s*$/
-  bundle.folding['source.sass'] = foldingStartMarker, foldingStopMarker
+  # Folding
+  folding_start_marker = /^\s*([-%#\:\.\w\=].*)\s$/
+  folding_stop_marker = /^\s*$/
+  bundle.folding['source.sass'] = folding_start_marker, folding_stop_marker
+  
+  # Auto-indent, stolen from CSS ruble
+  indent_marker = /\/\*\*(?!\*)|\{\s*($|\/\*(?!.*?\*\/.*\S))/
+  dedent_marker = /(?<!\*)\*\*\/|^\s*\}/
+  bundle.indent['source.sass'] = [indent_marker, dedent_marker]
+  
+  # Associate *.sass with a top-level scope of source.sass
   bundle.file_types['source.sass'] = '*.sass'
   
   bundle.menu 'Sass' do |main_menu|

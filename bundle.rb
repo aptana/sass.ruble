@@ -20,7 +20,7 @@ bundle do |bundle|
   bundle.indent['source.sass'] = [indent_marker, dedent_marker]
   
   # Associate *.sass with a top-level scope of source.sass
-  bundle.file_types['source.sass'] = '*.sass'
+  bundle.file_types['source.sass'] = '*.sass', '*.less'
   
   bundle.menu 'Sass' do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']
@@ -164,6 +164,15 @@ end
 
 # add special ENV vars
 env "source.sass" do |e|
+  # Single line comments
   e['TM_COMMENT_START'] = "// "
-  e['TM_COMMENT_START_2'] = "/*"
+  e.delete('TM_COMMENT_END')
+  
+  # Block comments
+  e['TM_COMMENT_START_2'] = "/* "
+  e['TM_COMMENT_END_2'] = " */"
+  
+  # Remove any possible 3rd comment type...
+  e.delete('TM_COMMENT_START_3')
+  e.delete('TM_COMMENT_END_3')
 end

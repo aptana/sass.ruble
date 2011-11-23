@@ -1,7 +1,7 @@
 !!com.aptana.scripting.model.BundleElement
 author: Bob Aman
 children:
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Compile SASS
@@ -15,7 +15,7 @@ children:
   runType: current_thread
   scope: source.sass
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Convert CSS to SASS
@@ -29,7 +29,7 @@ children:
   runType: current_thread
   scope: null
   workingDirectoryType: UNDEFINED
-- !!com.aptana.scripting.model.CommandElement
+- !command
   async: false
   customProperties: null
   displayName: Insert Color...
@@ -2222,15 +2222,15 @@ children:
   displayName: Sass
   path: bundle.rb
   scope: source.sass, source.css
-- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-5b687a43-7195-445b-985b-6a22d328c3e1,
+- !!com.aptana.scripting.model.EnvironmentElement {customProperties: null, displayName: environment-ba36b84e-5a69-4fc3-bda3-a1d2cb37078f,
   path: bundle.rb, scope: source.sass}
 copyright: Copyright 2010 Aptana Inc. Distributed under the MIT license.
 customProperties: null
 decreaseIndentMarkers: {!scope 'source.sass': !regexp '(?-mix:(?<!\*)\*\*\/|^\s*\})'}
 description: Port of Bob Aman's TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby.
 displayName: Sass
-fileTypeRegistry: {'*.sass': source.sass}
-fileTypes: ['*.sass']
+fileTypeRegistry: {'*.less': source.sass, '*.sass': source.sass}
+fileTypes: ['*.sass', '*.sass', '*.less']
 foldingStartMarkers: {!scope 'source.sass': !regexp '(?-mix:^\s*([-%#\:\.\w\=].*)\s$)'}
 foldingStopMarkers: {!scope 'source.sass': !regexp '(?-mix:^\s*$)'}
 increaseIndentMarkers: {!scope 'source.sass': !regexp '(?-mix:\/\*\*(?!\*)|\{\s*($|\/\*(?!.*?\*\/.*\S)))'}

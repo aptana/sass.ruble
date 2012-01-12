@@ -16,7 +16,7 @@ bundle do |bundle|
   
   # Auto-indent, stolen from CSS ruble
   indent_marker = /\/\*\*(?!\*)|\{\s*($|\/\*(?!.*?\*\/.*\S))/
-  dedent_marker = /(?<!\*)\*\*\/|^\s*\}/
+  dedent_marker = /\*\*\/|^\s*\}/
   bundle.indent['source.sass'] = [indent_marker, dedent_marker]
   
   # Associate *.sass with a top-level scope of source.sass

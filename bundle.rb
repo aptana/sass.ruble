@@ -1,12 +1,10 @@
-require 'java'
 require 'ruble'
 
 bundle do |bundle|
-  bundle.author = 'Christopher Williams'
+  bundle.author = 'Bob Aman, Christopher Williams'
   bundle.copyright = "Copyright 2010 Aptana Inc. Distributed under the MIT license."
-  bundle.author = 'Bob Aman'
-  bundle.display_name = 'Sass'
-  bundle.description = 'Port of Bob Aman\'s TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby.'
+  bundle.display_name = t(:bundle_name)
+  bundle.description = "Port of Bob Aman's TextMate Bundle for Sass, a template language for easily creating CSS; implemented in ruby."
   bundle.repository = 'http://github.com/aptana/sass.ruble.git'
   
   # Folding
@@ -22,10 +20,10 @@ bundle do |bundle|
   # Associate *.sass with a top-level scope of source.sass
   bundle.file_types['source.sass'] = '*.sass', '*.less'
   
-  bundle.menu 'Sass' do |main_menu|
+  bundle.menu t(:bundle_name) do |main_menu|
     main_menu.scope = ['source.sass', 'source.css']
     
-    main_menu.menu 'Background' do |submenu|
+    main_menu.menu t(:background) do |submenu|
       submenu.command 'background: color image repeat attachment position copy'
       submenu.separator
       submenu.command 'background-color: rgb'
@@ -40,7 +38,7 @@ bundle do |bundle|
       submenu.command 'background-position: position'
       submenu.command 'background-repeat: r/r-x/r-y/n-r'
     end
-    main_menu.menu 'Border' do |submenu|
+    main_menu.menu t(:border) do |submenu|
       submenu.command 'border: size style color copy'
       submenu.command 'border-top: size style color'
       submenu.command 'border-right: size style color'
@@ -67,22 +65,22 @@ bundle do |bundle|
       submenu.separator
       submenu.command 'border-radius:'
     end
-    main_menu.menu 'Cursor' do |submenu|
+    main_menu.menu t(:cursor) do |submenu|
       submenu.command 'cursor: type'
       submenu.command 'cursor: url'
     end
-    main_menu.menu 'Color' do |submenu|
+    main_menu.menu t(:color) do |submenu|
       submenu.command 'color: hex'
       submenu.command 'color: rgb'
       submenu.command 'color: name'
     end
-    main_menu.menu 'Display' do |submenu|
+    main_menu.menu t(:display) do |submenu|
       submenu.command 'display: inline'
       submenu.command 'display: block'
       submenu.command 'display: common-types'
       submenu.command 'display: table-types'
     end
-    main_menu.menu 'Font' do |submenu|
+    main_menu.menu t(:font) do |submenu|
       submenu.command 'font: size font'
       submenu.command 'font: style variant weight size/line-height font-family'
       submenu.separator
@@ -92,7 +90,7 @@ bundle do |bundle|
       submenu.command 'font-variant: normal/small-caps'
       submenu.command 'font-weight: weight'
     end
-    main_menu.menu 'List Style' do |submenu|
+    main_menu.menu t(:list_style) do |submenu|
       submenu.command 'list-style: type position image'
       submenu.command 'list-style-image: url'
       submenu.command 'list-style-position: pos'
@@ -103,7 +101,7 @@ bundle do |bundle|
       submenu.command 'list-style-type: asian'
       submenu.command 'list-style-type: other'
     end
-    main_menu.menu 'Margin' do |submenu|
+    main_menu.menu t(:margin) do |submenu|
       submenu.command 'margin: T R B L'
       submenu.command 'margin: all'
       submenu.command 'margin: V H'
@@ -113,7 +111,7 @@ bundle do |bundle|
       submenu.command 'margin-bottom: length'
       submenu.command 'margin-left: length'
     end
-    main_menu.menu 'Padding' do |submenu|
+    main_menu.menu t(:padding) do |submenu|
       submenu.command 'padding: T R B L'
       submenu.command 'padding: all'
       submenu.command 'padding: V H'
@@ -123,7 +121,7 @@ bundle do |bundle|
       submenu.command 'padding-bottom: length'
       submenu.command 'padding-left: length'
     end
-    main_menu.menu 'Text' do |submenu|
+    main_menu.menu t(:text) do |submenu|
       submenu.command 'text-align: left/center/right'
       submenu.command 'text-decoration: none/underline/overline/line-through/blink'
       submenu.command 'text-indent: length'
@@ -136,8 +134,8 @@ bundle do |bundle|
       submenu.command 'text-transform: none'
     end
     main_menu.separator
-    main_menu.menu 'Other' do |submenu|
-      submenu.command 'Attribute Selector'
+    main_menu.menu t(:other) do |submenu|
+      submenu.command t(:attribute_selector)
       submenu.command 'background-color: hex'
       submenu.command 'box-shadow:'
       submenu.command 'clear: value'
@@ -156,9 +154,9 @@ bundle do |bundle|
       submenu.command 'word-spacing: normal'
       submenu.command 'z-index: index'
     end
-    main_menu.command 'Compile SASS'
-    main_menu.command 'Convert CSS to SASS'
-    main_menu.command 'Insert Color...'
+    main_menu.command t(:compile_sass)
+    main_menu.command t(:convert_css_to_sass)
+    main_menu.command t(:insert_color)
   end
 end
 

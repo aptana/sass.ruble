@@ -2,7 +2,7 @@ require 'ruble'
 
 with_defaults :scope => 'source.sass' do |bundle|
   
-snippet 'Attribute Selector' do |s|
+snippet t(:attribute_selector) do |s|
   s.trigger = 'as'
   s.expansion = '${1:p}[${2:name}="${3:string}"]
   ${4:property}: ${5:value}$0'

@@ -1,6 +1,6 @@
 require 'ruble'
 
-command 'Convert CSS to SASS' do |cmd|
+command t(:convert_css_to_sass) do |cmd|
   cmd.key_binding = 'OPTION+COMMAND+C'
   cmd.output = :replace_selection
   cmd.input = :selection

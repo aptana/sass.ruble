@@ -1,6 +1,6 @@
 # SASS bundle for Aptana Studio
 
-A bundle to enable related commands in Aptana Studio. Ported from http://github.com/charlesr/ruby-sass-tmbundle.
+A bundle to enable related commands in Aptana Studio. Ported from https://github.com/complex/Sass.tmbundle.
 
 ## Authors
 
@@ -9,7 +9,7 @@ A bundle to enable related commands in Aptana Studio. Ported from http://github.
 
 ## License
 
-Forthcoming.
+MIT
 
 ## Bugs/Requests
 

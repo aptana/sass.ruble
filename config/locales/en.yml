@@ -14,5 +14,6 @@ en:
   attribute_selector: 'Attribute Selector'
   compile_sass: 'Compile SASS'
   convert_css_to_sass: 'Convert CSS to SASS'
+  convert_css_to_scss: 'Convert CSS to SCSS'
   insert_color: 'Insert Color...'
   

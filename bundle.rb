@@ -156,6 +156,7 @@ bundle do |bundle|
     end
     main_menu.command t(:compile_sass)
     main_menu.command t(:convert_css_to_sass)
+    main_menu.command t(:convert_css_to_scss)
     main_menu.command t(:insert_color)
   end
 end
